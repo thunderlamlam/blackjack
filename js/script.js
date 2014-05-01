@@ -1,4 +1,5 @@
-function deal() {
+
+function new_game() {
 	x = randomInteger(1, 52);
 	y = randomInteger(1, 52);
 	c = "#card"+x;
@@ -6,7 +7,17 @@ function deal() {
 	$(c).toggle();
 	$(b).toggle();
 	console.log(c,b);
+	document.getElementById('new_game').style.visibility = 'hidden';
+}
 
+function hit() {
+	z = randomInteger(1, 52);
+	d = "#card"+z;
+	$(d).toggle();
+}
+
+function stand() {
+	document.getElementById('hit').style.visibility = 'hidden';
 }
 
 function getLen( v ) { 
